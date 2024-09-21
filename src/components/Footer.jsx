@@ -1,6 +1,6 @@
-import githubIcon from '../assets/github-mark-white.png';
-import linkedInIcon from '../assets/linkedIn.png';
-import leetCodeIcon from '../assets/leetCode.png';
+import githubIcon from '../assets/icons/github-mark-white.png';
+import linkedInIcon from '../assets/icons/linkedIn.png';
+import leetCodeIcon from '../assets/icons/leetCode.png';
 
 function Footer() {
   const links = [
@@ -22,7 +22,7 @@ function Footer() {
   ]
 
   return (
-    <div className="container-fluid border-solid border-2 border-white grid justify-items-center my-2">
+    <div className="container-fluid border-solid border-2 border-white grid justify-items-center my-2" id='footer'>
       <p className='my-2'>Connect with me:</p>
       <div className="container inline-flex justify-center">
         {links.map((item, index) => (

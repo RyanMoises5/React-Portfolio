@@ -77,6 +77,10 @@ button:focus-visible {
   margin: 5px
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .icon:hover {
   filter: drop-shadow(0 0 2em #f0f0fd);
 }
