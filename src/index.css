@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -66,4 +66,17 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background-color: rgb(43, 55, 71);
+  margin: 5px
+}
+
+.icon:hover {
+  filter: drop-shadow(0 0 2em #f0f0fd);
 }
