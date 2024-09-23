@@ -72,9 +72,6 @@ button:focus-visible {
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  background-color: rgb(54, 67, 87);
-}
 
 html {
   scroll-behavior: smooth;

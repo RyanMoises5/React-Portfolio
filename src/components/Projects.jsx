@@ -28,47 +28,54 @@ function Projects() {
   ]
 
   return (
-    <div className='container-fluid border-gray-600 border-b-4 border-solid flex-block items-center py-14 mx-[5%]' id="projects">
+    <div className='container-fluid flex-block items-center py-14 mx-[5%]' id="projects">
       {projects.map((item, index) => (
-        <div key={index} className='container-fluid flex relative py-20'>
-        {index % 2 === 0 ? (
-          <>
-            <a href={item.url || null} target='blank' className='inline-flex right-0 max-w-[45vh]'>
-              <img src={item.image} className='border-solid border-8 border-gray-800 rounded-lg'></img>
-            </a>
-            <div className='px-10'>
-              <a href={item.url || null} target='blank'>
-                <h3 className='text-lg font-semibold italic'>{item.title}</h3>
+        <>
+          <div key={index} className='container-fluid flex relative py-20'>
+          {index % 2 === 0 ? (
+            <>
+              <a href={item.url || null} target='blank' className='inline-flex right-0 max-w-[45vh]'>
+                <img src={item.image} className='border-solid border-8 border-gray-800 rounded-lg'></img>
               </a>
-              <br/>
-              <p>{item.desc}</p>
-              <div className='inline-flex py-10'>
-              {item.languages.map((item, index) => (
-                <p key={index} className='bg-amber-100 text-slate-700 font-semibold text-nowrap px-1 mx-1'>{item}</p>
-               ))}
+              <div className='px-10'>
+                <a href={item.url || null} target='blank'>
+                  <h3 className='text-lg font-semibold italic'>{item.title}</h3>
+                </a>
+                <br/>
+                <p>{item.desc}</p>
+                <div className='inline-flex py-10'>
+                {item.languages.map((item, index) => (
+                  <p key={index} className='bg-amber-100 text-slate-700 font-semibold text-nowrap px-1 mx-1'>{item}</p>
+                  ))}
+                </div>
               </div>
-            </div>
-          </>
-        ) : (
-          <>
-            <div className='px-10'>
-              <a href={item.url || null} target='blank'>
-                <h3 className='text-lg font-semibold italic'>{item.title}</h3>
+            </>
+          ) : (
+            <>
+              <div className='px-10'>
+                <a href={item.url || null} target='blank'>
+                  <h3 className='text-lg font-semibold italic'>{item.title}</h3>
+                </a>
+                <br/>
+                <p>{item.desc}</p>
+                <div className='inline-flex py-10'>
+                {item.languages.map((item, index) => (
+                  <p key={index} className='bg-amber-100 text-slate-700 font-semibold text-nowrap px-1 mx-1'>{item}</p>
+                  ))}
+                </div>
+              </div>
+              <a href={item.url || null} target='blank' className='inline-flex right-0 max-w-[45vh]'>
+                <img src={item.image} className='border-solid border-8 border-gray-800 rounded-lg'></img>
               </a>
-              <br/>
-              <p>{item.desc}</p>
-              <div className='inline-flex py-10'>
-              {item.languages.map((item, index) => (
-                <p key={index} className='bg-amber-100 text-slate-700 font-semibold text-nowrap px-1 mx-1'>{item}</p>
-               ))}
-              </div>
+            </>
+          )}
+          </div>
+          {index < projects.length - 1 ? (
+            <div className="relative flex py-5 items-center">
+              <div className="flex-grow border-t mx-40 border-amber-900"></div>
             </div>
-            <a href={item.url || null} target='blank' className='inline-flex right-0 max-w-[45vh]'>
-              <img src={item.image} className='border-solid border-8 border-gray-800 rounded-lg'></img>
-            </a>
-          </>
-        )}
-        </div>
+          ) : null}
+        </>
       ))}
     </div>
   );
