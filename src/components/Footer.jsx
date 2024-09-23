@@ -3,6 +3,7 @@ import linkedInIcon from '../assets/icons/linkedIn.png';
 import leetCodeIcon from '../assets/icons/leetCode.png';
 
 function Footer() {
+
   const links = [
     {
       name: "github",
@@ -22,9 +23,8 @@ function Footer() {
   ]
 
   return (
-    <div className="container-fluid border-solid border-2 border-white grid justify-items-center my-2" id='footer'>
-      <p className='my-2'>Connect with me:</p>
-      <div className="container inline-flex justify-center">
+    <div className="footer bottom-0 container-fluid relative bg-slate-800 opacity-100 z-50 grid justify-items-center" id='footer'>
+      <div className="container inline-flex justify-center py-3">
         {links.map((item, index) => (
           <a key={index} href={item.link} target='blank' className='py-2 px-5 icon'>
             <img src={item.icon} className='size-10'></img>
@@ -34,5 +34,7 @@ function Footer() {
     </div>
   );
 }
+
+// header sticky top-0 container-fluid h-[8vh] w-screen relative bg-slate-800 opacity-100 z-50
 
 export default Footer;

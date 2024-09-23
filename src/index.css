@@ -73,8 +73,7 @@ button:focus-visible {
 @tailwind utilities;
 
 :root {
-  background-color: rgb(43, 55, 71);
-  margin: 5px
+  background-color: rgb(54, 67, 87);
 }
 
 html {

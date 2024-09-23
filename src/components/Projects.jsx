@@ -2,31 +2,31 @@ import pawfolio from '../assets/projects/pawfolio.png';
 import eventify from '../assets/projects/eventify.png';
 import bookServiceApp from '../assets/projects/bookServiceApp.png'
 
-const projects = [
-  {
-    title: "Pawfolio",
-    image: pawfolio,
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    languages: ['Javascript', "HTML", "CSS", 'MERN stack', 'bcrypt', 'GraphQL'],
-    url: "https://pawfolio-3wj8.onrender.com/"
-  },
-  {
-    title: "Eventify",
-    image: eventify,
-    desc: "Wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa.",
-    languages: ['Javascript', "HTML", "CSS", 'bcrypt', 'SQL'],
-    url: "https://limitless-scrubland-89760-c5cfabe4f1c5.herokuapp.com/"
-  },
-  {
-    title: "Book Service App",
-    image: bookServiceApp,
-    desc: "Test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test.",
-    languages: ['Javascript', "HTML", "CSS", 'Third-party APIs'],
-  }
-]
-
-
 function Projects() {
+  
+  const projects = [
+    {
+      title: "Pawfolio",
+      image: pawfolio,
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      languages: ['Javascript', "HTML", "CSS", 'MERN stack', 'bcrypt', 'GraphQL'],
+      url: "https://pawfolio-3wj8.onrender.com/"
+    },
+    {
+      title: "Eventify",
+      image: eventify,
+      desc: "Wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa.",
+      languages: ['Javascript', "HTML", "CSS", 'bcrypt', 'SQL'],
+      url: "https://limitless-scrubland-89760-c5cfabe4f1c5.herokuapp.com/"
+    },
+    {
+      title: "Book Service App",
+      image: bookServiceApp,
+      desc: "Test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test.",
+      languages: ['Javascript', "HTML", "CSS", 'Third-party APIs'],
+    }
+  ]
+
   return (
     <div className='container-fluid border-gray-600 border-b-4 border-solid flex-block items-center py-14 mx-[5%]' id="projects">
       {projects.map((item, index) => (
