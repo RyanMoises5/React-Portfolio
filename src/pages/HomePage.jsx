@@ -11,9 +11,9 @@ function HomePage() {
     <div className='bg-gray-700 text-amber-100'>
       <Header />
       <About />
-      <Divider next={'skills'} prev={'about'}/>
+      <Divider next={'skills'}/>
       <Skills />
-      <Divider next={'projects'} prev={'skills'}/>
+      <Divider next={'projects'}/>
       <Projects />
       <Footer />
     </div>

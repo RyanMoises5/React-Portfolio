@@ -1,6 +1,6 @@
 import { IoIosArrowDropdown } from "react-icons/io";
 
-const Divider = function({ next, prev }) {
+const Divider = function({ next }) {
   return (
     <>
       <div className="grid item-center">
@@ -8,7 +8,6 @@ const Divider = function({ next, prev }) {
           <IoIosArrowDropdown size={40}/>
         </a>
         <div className="grow border-t-4 mx-10 border-gray-600"></div>
-        {/* <a href={`#${prev}`} className='text-center mt-8' >Scroll prev button here</a> */}
       </div>
     </>
   )

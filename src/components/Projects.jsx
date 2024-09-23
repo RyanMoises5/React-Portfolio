@@ -32,7 +32,8 @@ function Projects() {
   ]
 
   return (
-    <div className='container-fluid flex-block items-center py-20 mx-[5%]' id="projects">
+    <div className='container-fluid pt-32 mx-[5%]' id="projects">
+      <h2 className='text-4xl text-center font-semibold'>Projects</h2>
       {projects.map((item, index) => (
         <>
           <div key={index} className='container-fluid flex relative py-32' id={item.title}>
@@ -65,9 +66,9 @@ function Projects() {
                 <br/>
                 <p>{item.desc}</p>
                 <div className='inline-flex py-10'>
-                {item.languages.map((item, index) => (
-                  <p key={index} className='bg-amber-100 text-slate-700 font-semibold text-nowrap px-1 mx-1'>{item}</p>
-                  ))}
+                  {item.languages.map((item, index) => (
+                    <p key={index} className='bg-amber-100 text-slate-700 font-semibold text-nowrap px-1 mx-1'>{item}</p>
+                    ))}
                 </div>
                 <div className='container-fluid flex relative my-4'>
                 {item.url ? (
@@ -84,8 +85,8 @@ function Projects() {
           </div>
           {index < projects.length - 1 ? (
             <>
-              <div className="relative flex py-5 text-amber-700">
-                <div className="flex-grow border-t border-amber-900 mx-8"></div>
+              <div className="relative flex py-5 text-amber-600">
+                <div className="flex-grow border-t border-amber-800 mx-8"></div>
                 <a href={`#${projects[index+1].title}`} className='mb-8' >
                   <IoIosArrowDown size={30}/>
                 </a>
