@@ -23,7 +23,7 @@ function Footer() {
   ]
 
   return (
-    <div className="footer bottom-0 container-fluid relative bg-slate-800 opacity-100 z-50 grid justify-items-center" id='footer'>
+    <div className="footer bottom-0 container-fluid relative bg-slate-800 opacity-100 z-50 grid justify-items-center h-60" id='footer'>
       <div className="container inline-flex justify-center py-3">
         {links.map((item, index) => (
           <a key={index} href={item.link} target='blank' className='py-2 px-5 icon'>
@@ -34,7 +34,5 @@ function Footer() {
     </div>
   );
 }
-
-// header sticky top-0 container-fluid h-[8vh] w-screen relative bg-slate-800 opacity-100 z-50
 
 export default Footer;

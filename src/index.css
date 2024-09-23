@@ -78,5 +78,5 @@ html {
 }
 
 .icon:hover {
-  filter: drop-shadow(0 0 2em #f0f0fd);
+  filter: drop-shadow(0 0 2em rgba(240, 240, 253, 0.267));
 }
