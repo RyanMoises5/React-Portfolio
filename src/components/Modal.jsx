@@ -1,12 +1,4 @@
 function Modal({ setOpenModal }) {
-  // function HealthMap({ pet, pin }) {
-  //       pin.readyPin('')
-
-  // console.log(modalState)
-  // function onCloseModal() {
-  //   setOpenModal(false);
-  //   setEmail('');
-  // }
 
   const sendEmailClickHandler = function (event) {
     event.preventDefault();

@@ -9,24 +9,24 @@ function Projects() {
     {
       title: "Pawfolio",
       image: pawfolio,
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      languages: ['Javascript', "HTML", "CSS", 'MERN stack', 'bcrypt', 'GraphQL'],
+      desc: "Pet care tracking app that allows a user to add pets to their account, add reminders for each pet, and keep track of health details of each pet.",
+      languages: ['Javascript', 'MERN', 'Mongoose ODM', 'JWT', 'Bcrypt', 'Apollo GraphQL', 'Semantics UI React', 'Webpack'],
       github: "https://github.com/RyanMoises5/PawFolio",
       url: "https://pawfolio-3wj8.onrender.com/"
     },
     {
       title: "Eventify",
       image: eventify,
-      desc: "Wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa.",
-      languages: ['Javascript', "HTML", "CSS", 'bcrypt', 'SQL'],
+      desc: "Event managing app that allows user to create, edit, organize, and view posted events from other registered users, and view profile details of other users.",
+      languages: ['Javascript', 'SQL', 'Sequelize ORM', 'Bcrypt', 'SQL', 'Handlebars.js', 'Materialize CSS'],
       github: "https://github.com/Santy520/Eventify",
       url: "https://limitless-scrubland-89760-c5cfabe4f1c5.herokuapp.com/"
     },
     {
       title: "Book Service App",
       image: bookServiceApp,
-      desc: "Test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test.",
-      languages: ['Javascript', "HTML", "CSS", 'Third-party APIs'],
+      desc: "Web app that allows users to search book details through Open Library and NYT Best Sellers, find EBooks versions on Google Books and Open Library, and save entries for later use. Heavy focus on string and array manipulation and logic for data from third party APIs.",
+      languages: ['Javascript', "JQuery", 'Third-party APIs'],
       github: "https://github.com/RyanMoises5/BookService-App",
     }
   ]
