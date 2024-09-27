@@ -1,4 +1,4 @@
-import { Button, Label, Modal, Textarea, TextInput } from "flowbite-react";
+import Modal from "./Modal";
 import { useState } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiLeetcode, SiUdemy } from "react-icons/si";
@@ -6,12 +6,6 @@ import { TfiEmail } from "react-icons/tfi";
 
 function Footer() {
   const [openModal, setOpenModal] = useState(false);
-  const [email, setEmail] = useState('');
-
-  function onCloseModal() {
-    setOpenModal(false);
-    setEmail('');
-  }
 
   return (
     <>
@@ -52,33 +46,10 @@ function Footer() {
         </div>
       </div>
 
-      <Modal show={openModal} size="md" onClose={onCloseModal} popup>
-        <Modal.Header />
-        <Modal.Body>
-          <div className="space-y-6">
-            <h3 className="text-xl font-medium text-gray-900 dark:text-white">Leave me an e-mail</h3>
-            <div>
-              <div className="mb-2 block">
-                <Label htmlFor="email" value="Your email" />
-              </div>
-              <TextInput
-                id="email"
-                placeholder="name@company.com"
-                value={email}
-                onChange={(event) => setEmail(event.target.value)}
-                required
-              />
-            </div>
-            <div>
-              <div className="mb-2 block">
-                <Label htmlFor="password" value="Your message" />
-              </div>
-              <Textarea id="password" type="password" required />
-            </div>
-            <Button>Send Email</Button>
-          </div>
-        </Modal.Body>
-      </Modal>
+      <div className={`modal-container ${openModal ? null : `hidden`} fixed z-50 left-0 top-0 bg-black bg-opacity-80 h-screen w-screen flex justify-center items-center`}>
+        <Modal setOpenModal={setOpenModal} />
+        {/* <HealthInfo pet={data.pet} pin={{pinState, readyPin}}/> */}
+      </div>
     </>
   );
 }

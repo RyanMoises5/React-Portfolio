@@ -31,70 +31,76 @@ function Projects() {
     }
   ]
 
+  const ProjectImage = function({item}) {
+    return (
+      <div className='inline-flex right-0 max-w-[45vh]'>
+        <img src={item.image} className='border-solid border-8 border-gray-800 rounded-lg '></img>
+      </div>
+    )
+  }
+
+  const ProjectDetails = function({item}) {
+    return (
+      <div className='px-10'>
+      <h3 className='text-lg font-semibold italic'>{item.title}</h3>
+      <br/>
+      <p>{item.desc}</p>
+      <div className='inline-flex py-10'>
+      {item.languages.map((item, index) => (
+        <p key={index} className='bg-amber-100 text-slate-700 font-semibold text-nowrap px-1 mx-1'>{item}</p>
+        ))}
+      </div>
+      <div className='container-fluid flex relative my-4'>
+        {item.url ? (
+          <a href={item.url} target='blank' className='bg-orange-400 rounded text-slate-800 font-bold p-2 border-2 border-orange-400 border-solid transition hover:-translate-x-0.5 hover:-translate-y-0.5 mx-2'>Live Site</a>
+        ) : null}
+        <a href={item.github || null} target='blank' className='bg-orange-400 rounded text-slate-800 font-bold p-2 border-2 border-orange-400 border-solid transition hover:-translate-x-0.5 hover:-translate-y-0.5 mx-2'>See Code</a>
+      </div>
+    </div>
+    )
+  }
+
+  const ProjectDivider = function({index}) {
+    return (
+      <div className="relative flex py-5 text-amber-600">
+        <div className="flex-grow relative border-t border-amber-800 mx-8"></div>
+        <a href={`#${projects[index+1].title}`} className='group mb-8'>
+          <IoIosArrowDown size={40}/>
+        </a>
+        <div className="flex-grow border-t border-amber-900 mx-8"></div>
+      </div>
+    )
+  }
+
+  // Hover animation needs work
+  // <a href={`#${projects[index+1].title}`} className='group mb-8'>
+  //   <div className='absolute rounded-lg text-transparent transition group-hover:bg-gray-800 h-14'>------</div>
+  //   <div className='transition group-hover:translate-y-5'><IoIosArrowDown size={40}/></div>
+  // </a>
+
+
   return (
-    <div className='container-fluid pt-32 mx-[5%]' id="projects">
+    <div className='projects container-fluid pt-32 mx-[5%]' id="projects">
       <h2 className='text-4xl text-center font-semibold'>Projects</h2>
       {projects.map((item, index) => (
-        <>
-          <div key={index} className='container-fluid flex relative py-32' id={item.title}>
-          {index % 2 === 0 ? (
-            <>
-              <div className='inline-flex right-0 max-w-[45vh]'>
-                <img src={item.image} className='border-solid border-8 border-gray-800 rounded-lg '></img>
-              </div>
-              <div className='px-10'>
-                <h3 className='text-lg font-semibold italic'>{item.title}</h3>
-                <br/>
-                <p>{item.desc}</p>
-                <div className='inline-flex py-10'>
-                {item.languages.map((item, index) => (
-                  <p key={index} className='bg-amber-100 text-slate-700 font-semibold text-nowrap px-1 mx-1'>{item}</p>
-                  ))}
-                </div>
-                <div className='container-fluid flex relative my-4'>
-                  {item.url ? (
-                    <a href={item.url} target='blank' className='bg-orange-500 rounded text-slate-800 font-bold p-2 border-2 border-orange-500 border-solid transition hover:-translate-x-0.5 hover:-translate-y-0.5 mx-2'>Live Site</a>
-                  ) : null}
-                  <a href={item.github || null} target='blank' className='bg-orange-500 rounded text-slate-800 font-bold p-2 border-2 border-orange-500 border-solid transition hover:-translate-x-0.5 hover:-translate-y-0.5 mx-2'>See Code</a>
-                </div>
-              </div>
-            </>
-          ) : (
-            <>
-              <div className='px-10'>
-                <h3 className='text-lg font-semibold italic'>{item.title}</h3>
-                <br/>
-                <p>{item.desc}</p>
-                <div className='inline-flex py-10'>
-                  {item.languages.map((item, index) => (
-                    <p key={index} className='bg-amber-100 text-slate-700 font-semibold text-nowrap px-1 mx-1'>{item}</p>
-                    ))}
-                </div>
-                <div className='container-fluid flex relative my-4'>
-                {item.url ? (
-                    <a href={item.url} target='blank' className='bg-orange-500 rounded text-slate-800 font-bold p-2 border-2 border-orange-500 border-solid transition hover:-translate-x-0.5 hover:-translate-y-0.5 mx-2'>Live Site</a>
-                  ) : null}
-                  <a href={item.github || null} target='blank' className='bg-orange-500 rounded text-slate-800 font-bold p-2 border-2 border-orange-500 border-solid transition hover:-translate-x-0.5 hover:-translate-y-0.5 mx-2'>See Code</a>
-                </div>
-              </div>
-              <div className='inline-flex right-0 max-w-[45vh]'>
-                <img src={item.image} className='border-solid border-8 border-gray-800 rounded-lg '></img>
-              </div>
-            </>
-          )}
+          <div key={index} id={item.title}>
+            <div className='container-fluid flex relative py-32' >
+            {index % 2 === 0 ? (
+              <>
+                <ProjectImage item={item} />
+                <ProjectDetails item={item} />
+              </>
+            ) : (
+              <>
+                <ProjectDetails item={item} />
+                <ProjectImage item={item} />
+              </>
+              )}
+            </div>
+            {index < projects.length - 1 ? (
+              <ProjectDivider index={index}/>
+            ) : null}
           </div>
-          {index < projects.length - 1 ? (
-            <>
-              <div className="relative flex py-5 text-amber-600">
-                <div className="flex-grow border-t border-amber-800 mx-8"></div>
-                <a href={`#${projects[index+1].title}`} className='mb-8' >
-                  <IoIosArrowDown size={30}/>
-                </a>
-                <div className="flex-grow border-t border-amber-900 mx-8"></div>
-              </div>
-            </>
-          ) : null}
-        </>
       ))}
     </div>
   );
