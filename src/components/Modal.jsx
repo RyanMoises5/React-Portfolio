@@ -1,4 +1,4 @@
-// import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
 
 function Modal({ setOpenModal }) {
