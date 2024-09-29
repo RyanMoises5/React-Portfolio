@@ -7,19 +7,18 @@ function Modal({ setOpenModal }) {
   const sendEmailClickHandler = function (event) {
     event.preventDefault();
 
-    console.log(process.env.PUBLIC_KEY, process.env.SERVICE_ID, process.env.TEMPLATE_ID);
-  //   emailjs
-  //   .sendForm("service_fm2d4n5", "template_ezn3v3e", form.current, {
-  //     publicKey: "GTgEOCNJgtMjgyfpg",
-  //   })
-  //   .then(
-  //     () => {
-  //       console.log('SUCCESS!');
-  //     },
-  //     (error) => {
-  //       console.log('FAILED...', error.text);
-  //     },
-  //   );
+    emailjs
+    .sendForm("service_fm2d4n5", "template_ezn3v3e", form.current, {
+      publicKey: "GTgEOCNJgtMjgyfpg",
+    })
+    .then(
+      () => {
+        console.log('SUCCESS!');
+      },
+      (error) => {
+        console.log('FAILED...', error.text);
+      },
+    );
   }
 
   const closeModalClickHandler = function (event) {
