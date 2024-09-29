@@ -20,7 +20,7 @@ function Modal({ setOpenModal }) {
   //       console.log('FAILED...', error.text);
   //     },
   //   );
-  // }
+  }
 
   const closeModalClickHandler = function (event) {
     event.preventDefault();
