@@ -7,7 +7,7 @@ function Modal({ setOpenModal }) {
   const sendEmailClickHandler = function (event) {
     event.preventDefault();
 
-    console.log(PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID);
+    console.log(process.env.PUBLIC_KEY, process.env.SERVICE_ID, process.env.TEMPLATE_ID);
   //   emailjs
   //   .sendForm("service_fm2d4n5", "template_ezn3v3e", form.current, {
   //     publicKey: "GTgEOCNJgtMjgyfpg",
