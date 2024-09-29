@@ -42,21 +42,21 @@ function Projects() {
   const ProjectDetails = function({item}) {
     return (
       <div className='px-10'>
-      <h3 className='text-lg font-semibold italic'>{item.title}</h3>
-      <br/>
-      <p>{item.desc}</p>
-      <div className='inline-flex py-10'>
-      {item.languages.map((item, index) => (
-        <p key={index} className='bg-amber-100 text-slate-700 font-semibold text-nowrap px-1 mx-1'>{item}</p>
-        ))}
+        <h3 className='text-lg font-semibold italic'>{item.title}</h3>
+        <br/>
+        <p>{item.desc}</p>
+        <div className='inline-flex py-10'>
+        {item.languages.map((item, index) => (
+          <p key={index} className='bg-amber-100 text-slate-700 font-semibold text-nowrap px-1 mx-1'>{item}</p>
+          ))}
+        </div>
+        <div className='container-fluid flex relative my-4'>
+          {item.url ? (
+            <a href={item.url} target='blank' className='bg-orange-400 rounded text-slate-800 font-bold p-2 border-2 border-orange-400 border-solid transition hover:-translate-x-0.5 hover:-translate-y-0.5 mx-2'>Live Site</a>
+          ) : null}
+          <a href={item.github || null} target='blank' className='bg-orange-400 rounded text-slate-800 font-bold p-2 border-2 border-orange-400 border-solid transition hover:-translate-x-0.5 hover:-translate-y-0.5 mx-2'>See Code</a>
+        </div>
       </div>
-      <div className='container-fluid flex relative my-4'>
-        {item.url ? (
-          <a href={item.url} target='blank' className='bg-orange-400 rounded text-slate-800 font-bold p-2 border-2 border-orange-400 border-solid transition hover:-translate-x-0.5 hover:-translate-y-0.5 mx-2'>Live Site</a>
-        ) : null}
-        <a href={item.github || null} target='blank' className='bg-orange-400 rounded text-slate-800 font-bold p-2 border-2 border-orange-400 border-solid transition hover:-translate-x-0.5 hover:-translate-y-0.5 mx-2'>See Code</a>
-      </div>
-    </div>
     )
   }
 

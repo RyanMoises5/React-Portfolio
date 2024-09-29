@@ -48,7 +48,7 @@ function Footer() {
 
       <div className={`modal-container ${openModal ? null : `hidden`} fixed z-50 left-0 top-0 bg-black bg-opacity-80 h-screen w-screen flex justify-center items-center`}>
         <Modal setOpenModal={setOpenModal} />
-      </div>
+      </div> 
     </>
   );
 }
