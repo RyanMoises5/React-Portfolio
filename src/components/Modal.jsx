@@ -9,8 +9,8 @@ function Modal({ setOpenModal }) {
 
     console.log("Hiiii!");
     emailjs
-    .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
-      publicKey: 'YOUR_PUBLIC_KEY',
+    .sendForm(process.env.YOUR_SERVICE_ID, process.env.YOUR_TEMPLATE_ID, form.current, {
+      publicKey: "GTgEOCNJgtMjgyfpg",
     })
     .then(
       () => {
