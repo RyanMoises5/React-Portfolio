@@ -1,10 +1,13 @@
 import { Outlet } from 'react-router-dom'
+import { ThemeProvider } from './utils/ThemeContext.jsx'
 
 function App() {
   return (
     <>
       <div>
-        <Outlet />
+        <ThemeProvider>
+          <Outlet />
+        </ThemeProvider>
       </div>
     </>
   )

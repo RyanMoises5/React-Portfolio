@@ -2,9 +2,11 @@ import pawfolio from '../assets/projects/pawfolio.png';
 import eventify from '../assets/projects/eventify.png';
 import bookServiceApp from '../assets/projects/bookServiceApp.png'
 import { IoIosArrowDown } from "react-icons/io";
+import { useTheme } from '../utils/ThemeContext';
 
 function Projects() {
-  
+  const { theme } = useTheme();
+
   const projects = [
     {
       title: "Pawfolio",
@@ -47,14 +49,14 @@ function Projects() {
         <p>{item.desc}</p>
         <div className='inline-flex py-10'>
         {item.languages.map((item, index) => (
-          <p key={index} className='bg-amber-100 text-slate-700 font-semibold text-nowrap px-1 mx-1'>{item}</p>
+          <p key={index} className={`bg-${theme}-accent text-${theme}-secondary font-semibold text-nowrap px-1 mx-1`}>{item}</p>
           ))}
         </div>
         <div className='container-fluid flex relative my-4'>
           {item.url ? (
-            <a href={item.url} target='blank' className='bg-orange-400 rounded text-slate-800 font-bold p-2 border-2 border-orange-400 border-solid transition hover:-translate-x-0.5 hover:-translate-y-0.5 mx-2'>Live Site</a>
+            <a href={item.url} target='blank' className={`bg-${theme}-accent-secondary text-${theme}-secondary rounded font-bold p-2 border-2 border-orange-400 border-solid transition hover:-translate-x-0.5 hover:-translate-y-0.5 mx-2`}>Live Site</a>
           ) : null}
-          <a href={item.github || null} target='blank' className='bg-orange-400 rounded text-slate-800 font-bold p-2 border-2 border-orange-400 border-solid transition hover:-translate-x-0.5 hover:-translate-y-0.5 mx-2'>See Code</a>
+          <a href={item.github || null} target='blank' className={`bg-${theme}-accent-secondary rounded text-${theme}-secondary font-bold p-2 border-2 border-orange-400 border-solid transition hover:-translate-x-0.5 hover:-translate-y-0.5 mx-2`}>See Code</a>
         </div>
       </div>
     )
@@ -62,7 +64,7 @@ function Projects() {
 
   const ProjectDivider = function({index}) {
     return (
-      <div className="relative flex py-5 text-amber-600">
+      <div className={`text-${theme}-primary relative flex py-5`}>
         <div className="flex-grow relative border-t border-amber-800 mx-8"></div>
         <a href={`#${projects[index+1].title}`} className='group mb-8'>
           <IoIosArrowDown size={40}/>
