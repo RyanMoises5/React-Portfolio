@@ -5,9 +5,8 @@
 :root {
   --light-primary: #e1e1dd;
   --light-secondary: #252422;
-  --light-text: 
-  #aa4d28 ;
-  --light-accent: #b3ae9f;
+  --light-text: #aa4d28;
+  --light-accent: #9b968a;
   --light-accent-secondary: #403d39;
   --dark-primary: #374151;
   --dark-secondary: #1E293B;
@@ -67,7 +66,14 @@ html {
 
 .resumeBtn-light:hover {
   background-color: var(--light-primary);
-  color: var( --light-text)
+  color: var( --light-text);
+  border-color: var(--light-text)
+}
+
+.emailBtn-light:hover {
+  background-color: var(--light-primary);
+  color: var(--light-text);
+  border-color: var(--light-text)
 }
 
 /* --------------------------- */
@@ -115,7 +121,14 @@ html {
 
 .resumeBtn-dark:hover {
   background-color: var(--dark-primary);
-  color: var( --dark-text)
+  color: var(--dark-text);
+  border-color: var(--dark-text)
+}
+
+.emailBtn-dark:hover {
+  background-color: var(--dark-primary);
+  color: var(--dark-text);
+  border-color: var(--dark-text)
 }
 
 /* .border-dark {
