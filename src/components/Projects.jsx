@@ -36,7 +36,7 @@ function Projects() {
   const ProjectImage = function({item}) {
     return (
       <div className='inline-flex right-0 max-w-[45vh]'>
-        <img src={item.image} className='border-solid border-8 border-gray-800 rounded-lg '></img>
+        <img src={item.image} className={`border-solid border-8 border-${theme}-primary rounded-lg`}></img>
       </div>
     )
   }
@@ -54,9 +54,9 @@ function Projects() {
         </div>
         <div className='container-fluid flex relative my-4'>
           {item.url ? (
-            <a href={item.url} target='blank' className={`bg-${theme}-accent-secondary text-${theme}-secondary rounded font-bold p-2 border-2 border-orange-400 border-solid transition hover:-translate-x-0.5 hover:-translate-y-0.5 mx-2`}>Live Site</a>
+            <a href={item.url} target='blank' className={`bg-${theme}-accent-secondary text-${theme}-secondary rounded font-bold p-2 transition hover:-translate-x-1 hover:-translate-y-1 mx-2`}>Live Site</a>
           ) : null}
-          <a href={item.github || null} target='blank' className={`bg-${theme}-accent-secondary rounded text-${theme}-secondary font-bold p-2 border-2 border-orange-400 border-solid transition hover:-translate-x-0.5 hover:-translate-y-0.5 mx-2`}>See Code</a>
+          <a href={item.github || null} target='blank' className={`bg-${theme}-accent-secondary text-${theme}-secondary rounded font-bold p-2 transition hover:-translate-x-1 hover:-translate-y-1 mx-2`}>See Code</a>
         </div>
       </div>
     )
@@ -65,11 +65,11 @@ function Projects() {
   const ProjectDivider = function({index}) {
     return (
       <div className={`text-${theme}-primary relative flex py-5`}>
-        <div className="flex-grow relative border-t border-amber-800 mx-8"></div>
+        <div className={`flex-grow relative border-t border-${theme}-secondary mx-8`}></div>
         <a href={`#${projects[index+1].title}`} className='group mb-8'>
           <IoIosArrowDown size={40}/>
         </a>
-        <div className="flex-grow border-t border-amber-900 mx-8"></div>
+        <div className={`flex-grow border-t border-${theme}-secondary mx-8`}></div>
       </div>
     )
   }

@@ -3,13 +3,16 @@ import { useState } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiLeetcode, SiUdemy } from "react-icons/si";
 import { TfiEmail } from "react-icons/tfi";
+import { useTheme } from '../utils/ThemeContext';
 
 function Footer() {
   const [openModal, setOpenModal] = useState(false);
 
+  const { theme } = useTheme();
+
   return (
     <>
-      <div className="footer bottom-0 container-fluid relative bg-slate-800 opacity-100 z-50 grid grid-cols-2 px-28 py-10" id='footer'>
+      <div className={`footer bottom-0 container-fluid relative bg-${theme}-secondary opacity-100 z-50 grid grid-cols-2 px-28 py-10`} id='footer'>
         <div className='left'>
           <div className='flex my-auto py-1' id="email">
             <div onClick={() => setOpenModal(true)} className="hover:cursor-pointer transition hover:scale-125">
