@@ -12,6 +12,8 @@ function Footer() {
   const sendEmailClickHandler = function (event) {
     event.preventDefault();
 
+    setEmailMessage('Sending email...')
+
     const date = new Date();
     const hour = date.getHours()%12;
     const min = date.getMinutes();
@@ -22,10 +24,10 @@ function Footer() {
     })
     .then(
       () => {
-        setEmailMessage(`Email has been sent at ${hour}:${min}`)
+        setEmailMessage(`Email has been successfully sent at ${hour}:${min}`)
       },
       (error) => {
-        console.log('FAILED...', error.text);
+        setEmailMessage(`Email failed to send (${hour}:${min}). Please try contacting me in another way.`)
       },
     );
   }
@@ -34,14 +36,14 @@ function Footer() {
     return (
       <div className={`text-${theme} rounded-lg p-12 leading-loose`}>
         <form className="flex flex-col font-semibold" ref={form} onSubmit={sendEmailClickHandler}>
-          <h3 className={`text-${theme}-secondary text-2xl`}>Leave a Message - <span className={`text-${theme}-primary`}>ryan.a.moises@gmail.com</span></h3>
+          <h3 className={`text-${theme}-secondary text-2xl font-bold`}>Leave a Message - <span className={`text-${theme}-primary`}>ryan.a.moises@gmail.com</span></h3>
           <br />
           <label htmlFor="name">Name:</label>
-          <input type="text" name="user_name" className={`text-${theme}-primary rounded`}></input>
+          <input type="text" name="user_name" className={`text-black rounded`}></input>
           <label htmlFor="email">Email:</label>
-          <input type="email" name="user_email" className={`text-${theme}-primary rounded`}></input>
+          <input type="email" name="user_email" className={`text-black rounded`}></input>
           <label htmlFor="message">Message:</label>
-          <textarea name="message" placeholder="Want to chat?" className={`text-${theme}-primary rounded`}></textarea>
+          <textarea name="message" placeholder="Want to connect?" className={`text-black rounded`}></textarea>
           <br />
           <div className="grid grid-cols-2 justify-evenly">
             <button onClick={sendEmailClickHandler} className={`emailBtn-${theme} rounded font-bold p-2 border-2 border-solid transition mx-2 col-span-1`}>Send Message</button>
