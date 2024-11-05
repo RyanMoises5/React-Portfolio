@@ -44,7 +44,7 @@ html {
 }
 
 .text-light-secondary {
-  color: var(--light-primary)
+  color: var(--light-secondary)
 }
 
 .text-light-accent {
@@ -99,7 +99,7 @@ html {
 }
 
 .text-dark-secondary {
-  color: var(--dark-primary)
+  color: var(--dark-secondary)
 }
 
 .text-dark-accent {

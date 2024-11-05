@@ -20,14 +20,14 @@ function Footer() {
       return false;
     }
 
-    // Validation for name
+    // Validation for email
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailRegex.test(form.current.user_email.value)) {
       setEmailMessage('Please enter a valid email address.');
       return false;
     }
 
-    // Validation for name
+    // Validation for message
     if (form.current.message.value === '') {
       setEmailMessage('Please leave a message in the provided field.');
       return false;
@@ -57,7 +57,7 @@ function Footer() {
     return (
       <div className={`text-${theme} rounded-lg p-12 leading-loose`}>
         <form className="flex flex-col font-semibold" ref={form} onSubmit={sendEmailClickHandler}>
-          <h3 className={`text-${theme}-secondary text-2xl font-bold`}>Leave a Message - <span className={`text-${theme}-primary`}>ryan.a.moises@gmail.com</span></h3>
+          <h3 className={`text-${theme}-primary text-2xl font-bold`}>Leave a Message - <span>ryan.a.moises@gmail.com</span></h3>
           <br />
           <label htmlFor="name">Name:</label>
           <input type="text" name="user_name" className={`text-black rounded`}></input>
