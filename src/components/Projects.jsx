@@ -44,7 +44,7 @@ function Projects() {
   const ProjectDetails = function({item}) {
     return (
       <div className='px-10'>
-        <h3 className='text-lg font-semibold italic'>{item.title}</h3>
+        <h3 className='text-lg font-bold'>{item.title}</h3>
         <br/>
         <p>{item.desc}</p>
         <div className='inline-flex py-10'>
@@ -83,7 +83,7 @@ function Projects() {
 
   return (
     <div className='projects container-fluid pt-32 mx-[5%]' id="projects">
-      <h2 className='text-4xl text-center font-semibold'>Projects</h2>
+      <h2 className='text-4xl text-center font-bold'>Projects</h2>
       {projects.map((item, index) => (
           <div key={index} id={item.title}>
             <div className='container-fluid flex relative py-32' >

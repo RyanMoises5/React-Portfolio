@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --light-primary: #e1e1dd;
-  --light-secondary: #252422;
-  --light-text: #aa4d28;
-  --light-accent: #9b968a;
-  --light-accent-secondary: #403d39;
+  --light-primary: #fffffe;
+  --light-secondary: #2b2d42;
+  --light-text: #8d99ae;
+  --light-accent: #d62828;
+  --light-accent-secondary: #d62828;
   --dark-primary: #54647c;
   --dark-secondary: #1E293B;
   --dark-text: #FEF3C7;

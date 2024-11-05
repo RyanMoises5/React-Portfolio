@@ -12,6 +12,27 @@ function Footer() {
   const sendEmailClickHandler = function (event) {
     event.preventDefault();
 
+    // TODO: Prevent form from clearing when the message did not send successfully
+
+    // Validation for name
+    if (form.current.user_name.value === '') {
+      setEmailMessage('Please leave your name in the provided field.');
+      return false;
+    }
+
+    // Validation for name
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(form.current.user_email.value)) {
+      setEmailMessage('Please enter a valid email address.');
+      return false;
+    }
+
+    // Validation for name
+    if (form.current.message.value === '') {
+      setEmailMessage('Please leave a message in the provided field.');
+      return false;
+    }
+
     setEmailMessage('Sending email...')
 
     const date = new Date();
