@@ -8,8 +8,8 @@ function Header() {
 
   return (
     <>
-    <div className={`header sticky top-0 container-fluid h-[8vh] bg-${theme}-secondary opacity-100 z-40 py-10 flex items-center font-bold`}>
-      <h1 className={`text-2xl text-${theme}-accent mx-8 italic`}>ryan.a.moises.adv@gmail.com</h1>
+    <div className={`header sticky top-0 container-fluid bg-${theme}-secondary opacity-100 z-40 py-4 flex items-center font-bold`}>
+      <h1 className={`text-xl text-${theme}-accent mx-8 italic`}>ryan.a.moises.adv@gmail.com</h1>
       <Navbar />
       {/* <div className="absolute right-0 mx-5">
         {navButtons.map((item, index) => (

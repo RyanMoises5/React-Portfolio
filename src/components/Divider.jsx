@@ -6,8 +6,8 @@ const Divider = function({ next }) {
 
   return (
     <>
-      <div className="grid item-center">
-        <a href={`#${next}`} className='h-100 justify-self-center mb-8' >
+      <div className="block grid item-center">
+        <a href={`#${next}`} className='justify-self-center mb-8' >
           <IoIosArrowDropdown size={40}/>
         </a>
         <div className={`grow border-t-2 mx-10 border-${theme}-primary`}></div>

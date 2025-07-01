@@ -66,7 +66,7 @@ function Skills() {
   ]
 
   return (
-    <div className='container-fluid py-32 mx-[5%] h-[85vh]' id='skills'>
+    <div className='container-fluid py-32 mx-[5%]' id='skills'>
       <h2 className='text-4xl text-center font-bold'>Skills</h2>
       <div className='flex flex-wrap justify-center my-8'>
         {skillsArr.map((item, index) => (

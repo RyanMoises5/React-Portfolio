@@ -35,7 +35,7 @@ function Projects() {
 
   const ProjectImage = function({item}) {
     return (
-      <div className='inline-flex right-0 min-w-40 max-w-[45vh]'>
+      <div className='inline-flex right-0 min-w-40'>
         <img src={item.image} className={`border-solid border-4 border-${theme}-primary rounded-lg object-cover`}></img>
       </div>
     )
@@ -49,9 +49,12 @@ function Projects() {
         <p>{item.desc}</p>
         <div className='inline-flex py-10'>
         {item.languages.map((item, index) => (
-          <p key={index} className={`bg-${theme}-accent text-${theme}-secondary font-semibold text-nowrap p-1 mx-1`}>{item}</p>
+          <p key={index} className={`bg-${theme}-accent text-${theme}-secondary font-semibold text-nowrap px-2 mx-1`}>{item}</p>
           ))}
         </div>
+
+        {/* Needs styling editing above, items won't wrap ^^^ */}
+
         <div className='container-fluid flex relative my-4'>
           {item.url ? (
             <a href={item.url} target='blank' className={`bg-${theme}-accent-secondary text-${theme}-secondary rounded font-bold p-2 transition hover:-translate-x-1 hover:-translate-y-1 mx-2`}>Live Site</a>
@@ -86,7 +89,7 @@ function Projects() {
       <h2 className='text-4xl text-center font-bold'>Projects</h2>
       {projects.map((item, index) => (
           <div key={index} id={item.title}>
-            <div className='container-fluid flex relative py-32' >
+            <div className='container-fluid flex relative py-20 w-full' >
             {index % 2 === 0 ? (
               <>
                 <ProjectImage item={item} />
