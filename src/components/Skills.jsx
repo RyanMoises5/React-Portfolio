@@ -1,5 +1,5 @@
 import { IoLogoJavascript, IoLogoNodejs, IoLogoReact, IoLogoCss3 } from "react-icons/io5";
-import { SiMongodb, SiExpress, SiTailwindcss, SiGraphql, SiBootstrap, SiJquery, SiApollographql } from "react-icons/si";
+import { SiMongodb, SiExpress, SiTailwindcss, SiGraphql, SiBootstrap, SiJquery, SiApollographql, SiTypescript  } from "react-icons/si";
 import { DiMaterializecss } from "react-icons/di";
 import { useTheme } from '../utils/ThemeContext';
 
@@ -10,6 +10,10 @@ function Skills() {
     {
       name: 'Javascript',
       logo: IoLogoJavascript
+    },
+    {
+      name: 'Typescript',
+      logo: SiTypescript 
     },
     {
       name: 'Jquery',

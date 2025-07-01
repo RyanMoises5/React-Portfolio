@@ -35,8 +35,8 @@ function Projects() {
 
   const ProjectImage = function({item}) {
     return (
-      <div className='inline-flex right-0 max-w-[45vh]'>
-        <img src={item.image} className={`border-solid border-4 border-${theme}-primary rounded-lg`}></img>
+      <div className='inline-flex right-0 min-w-40 max-w-[45vh]'>
+        <img src={item.image} className={`border-solid border-4 border-${theme}-primary rounded-lg object-cover`}></img>
       </div>
     )
   }
