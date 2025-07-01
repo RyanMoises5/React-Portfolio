@@ -86,19 +86,19 @@ function Footer() {
             <a href="https://www.linkedin.com/in/ryan-moises/" target="blank" className="transition hover:scale-125"> 
               <FaLinkedin size={50}/>
             </a>    
-            <p className='mx-4 my-auto'>linkedin.com/in/ryan-moises</p>
+            <p className='mx-4 my-auto'>ryan-moises</p>
           </div>
           <div className='flex my-auto py-1' id="github">    
             <a href="https://github.com/RyanMoises5" target="blank" className="transition hover:scale-125"> 
               <FaGithub size={50}/>
             </a>    
-            <p className='mx-4 my-auto'>github.com/RyanMoises5</p>
+            <p className='mx-4 my-auto'>RyanMoises5</p>
           </div>
           <div className='flex my-auto py-1' id="leetcode">    
             <a href="https://leetcode.com/u/rmoises/" target="blank" className="transition hover:scale-125"> 
               <SiLeetcode size={50}/>
             </a>    
-            <p className='mx-4 my-auto'>leetcode.com/u/rmoises</p>
+            <p className='mx-4 my-auto'>rmoises</p>
           </div>
         </div>
       </div>
