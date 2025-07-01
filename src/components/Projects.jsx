@@ -47,19 +47,19 @@ function Projects() {
         <h3 className='text-lg font-bold'>{item.title}</h3>
         <br/>
         <p>{item.desc}</p>
-        <div className='inline-flex py-10'>
+        <div className='container inline-flex flex-wrap py-10'>
         {item.languages.map((item, index) => (
-          <p key={index} className={`bg-${theme}-accent text-${theme}-secondary font-semibold text-nowrap px-2 mx-1`}>{item}</p>
+          <p key={index} className={`bg-${theme}-accent text-${theme}-secondary font-semibold text-nowrap px-2 mr-1 mb-1`}>{item}</p>
           ))}
         </div>
 
         {/* Needs styling editing above, items won't wrap ^^^ */}
 
-        <div className='container-fluid flex relative my-4'>
+        <div>
           {item.url ? (
-            <a href={item.url} target='blank' className={`bg-${theme}-accent-secondary text-${theme}-secondary rounded font-bold p-2 transition hover:-translate-x-1 hover:-translate-y-1 mx-2`}>Live Site</a>
+            <a href={item.url} target='blank' className={`bg-${theme}-accent-secondary text-${theme}-secondary rounded font-bold p-2 transition hover:-translate-x-1 hover:-translate-y-1 mr-2`}>Live Site</a>
           ) : null}
-          <a href={item.github || null} target='blank' className={`bg-${theme}-accent-secondary text-${theme}-secondary rounded font-bold p-2 transition hover:-translate-x-1 hover:-translate-y-1 mx-2`}>See Code</a>
+          <a href={item.github || null} target='blank' className={`bg-${theme}-accent-secondary text-${theme}-secondary rounded font-bold p-2 transition hover:-translate-x-1 hover:-translate-y-1`}>See Code</a>
         </div>
       </div>
     )
@@ -85,11 +85,11 @@ function Projects() {
 
 
   return (
-    <div className='projects container-fluid pt-32 mx-[5%]' id="projects">
+    <div className='projects container pt-32 mx-[5%] w-full' id="projects">
       <h2 className='text-4xl text-center font-bold'>Projects</h2>
       {projects.map((item, index) => (
           <div key={index} id={item.title}>
-            <div className='container-fluid flex relative py-20 w-full' >
+            <div className='container-fluid flex relative py-20' >
             {index % 2 === 0 ? (
               <>
                 <ProjectImage item={item} />
