@@ -7,7 +7,7 @@ function About() {
 
   return (
     <>
-      <div className='container-fluid flex items-center pb-40 mx-10 h-[85vh]' id='about'>
+      <div className='container-fluid flex items-center pb-40 mx-20 h-[85vh]' id='about'>
         <img src={portrait} className={`max-h-80 border-solid border-4 border-${theme}-secondary rounded-lg`}/>
         <div className='p-8'>
           <h2 className='text-5xl leading-tight'>Hello, I am <span className={`bg-${theme}-accent text-${theme}-secondary rounded font-bold px-1`}>Ryan Moises</span></h2>

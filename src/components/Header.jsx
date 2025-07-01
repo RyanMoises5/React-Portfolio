@@ -13,9 +13,9 @@ function Header() {
         {navButtons.map((item, index) => (
           <a key={index} href={`#${item === "Connect" ? "footer" : item.toLowerCase()}`} className={`navBtn-${theme} mx-5 py-2 px-3 rounded`}>{item}</a>
           ))}
+        <button className={`navBtn-${theme} mx-5 py-2 px-3 rounded`} onClick={toggleTheme}>Change Theme</button>
       </div>
     </div>
-    <button onClick={toggleTheme}>Change Theme</button>
     </>
   );
 }

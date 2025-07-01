@@ -49,7 +49,7 @@ function Projects() {
         <p>{item.desc}</p>
         <div className='inline-flex py-10'>
         {item.languages.map((item, index) => (
-          <p key={index} className={`bg-${theme}-accent text-${theme}-secondary font-semibold text-nowrap px-1 mx-1`}>{item}</p>
+          <p key={index} className={`bg-${theme}-accent text-${theme}-secondary font-semibold text-nowrap p-1 mx-1`}>{item}</p>
           ))}
         </div>
         <div className='container-fluid flex relative my-4'>
