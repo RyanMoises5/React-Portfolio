@@ -8,15 +8,16 @@ function Header() {
 
   return (
     <>
-    <div className={`header sticky top-0 container-fluid bg-${theme}-secondary opacity-100 z-40 py-4 flex items-center font-bold`}>
-      <h1 className={`text-xl text-${theme}-accent mx-8 italic`}>ryan.a.moises.adv@gmail.com</h1>
-      <Navbar />
-      {/* <div className="absolute right-0 mx-5">
-        {navButtons.map((item, index) => (
-          <a key={index} href={`#${item === "Connect" ? "footer" : item.toLowerCase()}`} className={`navBtn-${theme} mx-5 py-2 px-3 rounded`}>{item}</a>
-          ))}
-        <button className={`navBtn-${theme} mx-5 py-2 px-3 rounded`} onClick={toggleTheme}>Change Theme</button>
-      </div> */}
+    <div className={`header sticky top-0 container-fluid bg-${theme}-secondary opacity-100 z-40 py-4 flex items-center justify-between font-bold`}>
+      {/* Email - responsive text sizing and spacing */}
+      <h1 className={`text-sm sm:text-base lg:text-xl text-${theme}-accent mx-4 sm:mx-6 lg:mx-8 italic`}>
+        ryan.a.moises.adv@gmail.com
+      </h1>
+      
+      {/* Navbar - hidden on small screens, visible on medium screens and up */}
+      <div className='hidden md:flex items-center justify-center'>
+        <Navbar />
+      </div>
     </div>
     </>
   );
