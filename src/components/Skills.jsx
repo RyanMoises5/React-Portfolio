@@ -66,8 +66,8 @@ function Skills() {
   ]
 
   return (
-    <div className='container-fluid py-32 mx-[5%]' id='skills'>
-      <h2 className='text-4xl text-center font-bold'>Skills</h2>
+    <div className='container-fluid py-10 mx-[5%]' id='skills'>
+      <h2 className='text-3xl text-center font-bold'>Skills</h2>
       <div className='flex flex-wrap justify-center my-8'>
         {skillsArr.map((item, index) => (
           <div key={index} className={`bg-${theme}-accent-secondary text-${theme}-secondary rounded font-bold justify-items-center p-4 m-2`}>
