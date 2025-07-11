@@ -128,7 +128,7 @@ function Projects() {
                         className={`w-full h-48 sm:h-56 md:h-64 lg:h-72 border-solid border-4 border-${theme}-primary rounded-lg object-cover object-top`}
                       />
                     </div>
-                  </div>np
+                  </div>
                 </div>
               </div>
             )}
